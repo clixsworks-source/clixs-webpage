@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #8849a6;
+  --color-brand-white: #FFFFFF;
+}
+
+@layer base {
+  :root {
+    --background: #8849a6;
+    --foreground: #FFFFFF;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lenis Recommended Styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Hide Next.js Dev Tools Indicator */
+nextjs-portal {
+  display: none !important;
+}
+
+/* Chrome Text Effect */
+.chrome-text {
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #d1d1d1 35%,
+    #8e8e8e 48%,
+    #222222 50%,
+    #5a5a5a 52%,
+    #d1d1d1 75%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.4));
+}
+
+.galaxy-bg {
+  background-image: radial-gradient(circle at center, #8849a6 0%, #5d257a 35%, #310c47 60%, #12011f 80%, #050505 100%);
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
