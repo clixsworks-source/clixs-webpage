@@ -41,8 +41,5 @@ yarn-error.log*
 next-env.d.ts
 
 # Large Video Files (exceeding GitHub/Vercel size limits)
-*.mp4
-website video .mp4
 webvid.mp4
-mobile web.mp4
 

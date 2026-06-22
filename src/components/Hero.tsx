@@ -259,13 +259,16 @@ export default function Hero() {
         >
           {videoSrc && (
             <video
-              src={videoSrc}
+              key={videoSrc}
               autoPlay
               loop
               muted
               playsInline
+              preload="auto"
               className="w-full h-full object-cover"
-            />
+            >
+              <source src={videoSrc} type="video/mp4" />
+            </video>
           )}
         </motion.div>
 
