@@ -86,7 +86,7 @@ export default function Cases({ scrollYProgress }: CasesProps) {
 
       {/* 2. Horizontal Cards Row Container */}
       <div className="w-full flex-grow flex items-center justify-center mt-3 sm:mt-4 lg:mt-5 z-20">
-        <div className="w-full overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none no-scrollbar px-6 sm:px-12 md:px-24">
+        <div className="w-full overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none no-scrollbar px-[calc((100vw-280px)/2)] lg:px-24">
           <motion.div 
             style={{ x: isDesktop ? cardsX : "0vw" }}
             className="flex flex-row gap-6 lg:gap-10 w-max snap-align-none"
@@ -97,7 +97,7 @@ export default function Cases({ scrollYProgress }: CasesProps) {
               return (
                 <motion.div
                   key={index}
-                  style={{ y: cardYTransforms[index] }}
+                  style={{ y: isDesktop ? cardYTransforms[index] : "0vh" }}
                   className="shrink-0 snap-center"
                 >
                   <Link href={`/services/${service.title.toLowerCase().replace(/ /g, "-")}`} className="block pointer-events-auto select-none">
@@ -106,7 +106,7 @@ export default function Cases({ scrollYProgress }: CasesProps) {
                       onMouseLeave={() => setHoveredCard(null)}
                       whileHover={isDesktop ? { y: -10 } : {}}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                      className="relative w-[250px] h-[350px] xs:w-[290px] xs:h-[400px] lg:w-[360px] lg:h-[460px] flex flex-col justify-between p-4 lg:p-6 cursor-pointer rounded-none border-0 shadow-[0_15px_40px_rgba(0,0,0,0.5)] overflow-hidden"
+                      className="relative w-[280px] h-[380px] lg:w-[360px] lg:h-[460px] flex flex-col justify-between p-4 lg:p-6 cursor-pointer rounded-none border-0 shadow-[0_15px_40px_rgba(0,0,0,0.5)] overflow-hidden"
                       style={{
                         backgroundColor: isHovered ? service.color : "#F2F2F2",
                         transition: "background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
