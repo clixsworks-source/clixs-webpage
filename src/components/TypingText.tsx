@@ -90,7 +90,7 @@ export default function TypingText({
 
     const arrowPosition = arrowIndex + arrowAfterWord.length;
     const beforeArrowText = text.slice(0, arrowPosition);
-    const afterArrowText = text.slice(arrowPosition);
+
 
     const typedBeforeArrow = displayedText.slice(0, beforeArrowText.length);
     const typedAfterArrow = displayedText.length > beforeArrowText.length
